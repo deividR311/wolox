@@ -1,5 +1,6 @@
 <div>
-    <div class="containter_technologies" *ngFor="let technology of technologies">
+    <h2 class="title">Technologies</h2>
+    <div *ngFor="let technology of technologies">
         <app-technology-card [technology]="technology"></app-technology-card>
     </div>
 </div>

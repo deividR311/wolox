@@ -11,6 +11,7 @@ export class TechnologyCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.technology)
   }
 
 }
