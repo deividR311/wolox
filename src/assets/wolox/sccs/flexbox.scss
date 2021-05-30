@@ -235,3 +235,41 @@ body {
 .space{
     width: 100%;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 49%;
+    margin: 2px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.flex-containerTitle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-containerTitle > div {
+    width: 100%;
+    margin: 2px;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+    .flex-containerTitle {
+      flex-direction: column;
+    }
+  }
