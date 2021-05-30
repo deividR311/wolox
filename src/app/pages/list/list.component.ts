@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  public technologies: any = [];
+
+  constructor( readonly listService: ListService ) { }
 
   ngOnInit(): void {
+    this.handleTechnologiesData()
+  }
+
+  public handleTechnologiesData() {
+    this.listService.getTechnologyList().subscribe(
+      (res: any) => { this.technologies = res} ,
+      (err: any) => { throw err }
+    )
   }
 
 }
