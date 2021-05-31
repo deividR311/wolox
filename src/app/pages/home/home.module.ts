@@ -6,11 +6,12 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const COMPONENTS = [
     HomeComponent,
-    ProfitComponent
+    ProfitComponent,
+    WelcomeComponent
 ];
 
 @NgModule({
-    declarations: [...COMPONENTS, WelcomeComponent],
+    declarations: [...COMPONENTS],
     entryComponents: [...COMPONENTS],
     exports: [...COMPONENTS],
     imports: [HomeRoutingModule],
