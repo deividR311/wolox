@@ -1,7 +1,28 @@
-.containter_technologies {
-    width: 100%;
+.container_list {
+    padding: 50px;
 }
 
 .title {
     text-align: center;
+}
+
+.preloader {
+    width: 70px;
+    height: 70px;
+    border: 10px solid #eee;
+    border-top: 10px solid #666;
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: 0 auto !important;
+}
+@keyframes girar {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
 }
