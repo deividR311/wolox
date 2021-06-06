@@ -10,6 +10,10 @@ const PagesRoutes: Routes = [
         path: 'list',
         loadChildren: () => import('./list/list.module').then((m) => m.ListModule)
     },
+    {
+        path: 'register',
+        loadChildren: () => import('./register/register.module').then((m) => m.RegisterModule)
+    },
 ];
 @NgModule({
     imports: [RouterModule.forChild(PagesRoutes)],
