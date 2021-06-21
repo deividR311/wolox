@@ -7,6 +7,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/pages.module').then((x) => x.PagesModule),
   },
+  { path: '**', redirectTo: 'register' }
 ];
 
 @NgModule({

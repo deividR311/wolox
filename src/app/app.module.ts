@@ -16,6 +16,8 @@ import { PipesModule } from './pipes/pipes.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

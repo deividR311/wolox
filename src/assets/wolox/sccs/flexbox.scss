@@ -213,6 +213,11 @@
   margin: 30px;
 }
 
+.general-container {
+    width: 95%;
+    margin: 0 auto !important;
+}
+
 .layout-horizontal,
 .layout-vertical {
   background-color: ddd;
@@ -244,6 +249,21 @@ body {
 .img1{
     width: 70%;
     height: 70%;
+}
+
+.flex-row {
+    flex-direction: row;
+    width: 16.1%;
+}
+
+.flex-column {
+    flex-direction: column
+}
+
+.containerItem {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-container > div {
