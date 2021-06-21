@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -12,7 +13,7 @@ const COMPONENTS = [
     declarations: [...COMPONENTS],
     entryComponents: [...COMPONENTS],
     exports: [...COMPONENTS],
-    imports: [],
+    imports: [RouterModule],
     providers: [],
 })
 export class LayoutModule { }

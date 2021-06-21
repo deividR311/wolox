@@ -12,6 +12,13 @@
     cursor: pointer;
 }
 
+.success-text {
+    color: #4CAF50;
+}
+
+.primary-text {
+    color: #008CBA;
+}
 
 .succes{
     background-color: #4CAF50;
@@ -24,10 +31,50 @@
 }
 .primary:hover{
     background-color: #0e627e;
+    cursor: pointer;
+}
+
+.registerButton{
+    background-color: transparent;
+    color: #008CBA;
+    width: 150px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid #008CBA;
+}
+.registerButton:hover{
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.knowMoreButton{
+    background-color: #008CBA;
+    color: white;
+    width: 150px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid #008CBA;
+    margin-right: 5px;
+}
+.knowMoreButton:hover{
+    background-color: #0e627e;
+    color: white;
+    cursor: pointer;
+}
+
+.primary:disabled{
+    background-color: #528292;
+    cursor: no-drop;
 }
 
 .danger{
     background-color: #f44336;
+}
+
+.error{
+    background-color: #ffaea8;
+    color: red;
 }
 
 .danger:hover{
