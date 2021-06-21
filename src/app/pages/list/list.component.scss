@@ -1,5 +1,7 @@
 .container_list {
     padding: 50px;
+    align-items: center;
+    text-align: center;
 }
 
 .title {
@@ -25,4 +27,12 @@ from {
 to {
     transform: rotate(360deg);
 }
+}
+
+.input {
+    border-radius: 10px;
+    border: 1px solid #E3E3E3;
+    height: 30px;
+    width: 300px;
+    padding: 10px;
 }

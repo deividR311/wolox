@@ -1,6 +1,7 @@
 <div class="container_list">
     <h2 class="title">Technologies</h2>
-    <div *ngFor="let technology of technologies">
+    <input class="input" type="text" name="filterTechnologies" placeholder="Search..." [(ngModel)]="filterTechnologies"/>
+    <div *ngFor="let technology of technologies | filter:filterTechnologies">
         <app-technology-card [technology]="technology"></app-technology-card>
     </div>
     <div class="preloader" *ngIf="technologies.length === 0"></div>
