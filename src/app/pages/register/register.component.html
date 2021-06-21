@@ -1,1 +1,134 @@
-<h1>register</h1>
+<div class="formContainer layout-horizontal flex-wrap grow-children">
+  <form [formGroup]="signUpForm" (ngSubmit)="handleFillSignUpData()">
+    <div class="display-container">
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Nombres</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="text" ngModel maxlength="30" formControlName="name"/>
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('name')"
+          message="El campo es requerido"
+        ></app-form-error-message>
+      </div>
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Apellidos</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="text" ngModel maxlength="30" formControlName="lastName" />
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('lastName')"
+          message="El campo es requerido"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Pais</label>
+        </div>
+        <div class="itemContainer">
+          <select class="itemClass" (click)="handleCitiesByCountry()" formControlName="country">
+            <option *ngFor="let country of countries" value="{{ country }}">{{ country }}</option>
+          </select>
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('country')"
+          message="El campo es requerido"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Providencia</label>
+        </div>
+        <div class="itemContainer">
+          <select class="itemClass" formControlName="providence">
+            <option *ngFor="let city of cities.cities" value="{{ city }}">{{ city }}</option>
+          </select>
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('providence')"
+          message="El campo es requerido"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Correo</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="email" formControlName="email" />
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('email')"
+          message="El campo es requerido"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Telefono</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="tel" formControlName="phone" />
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('phone')"
+          message="Maximo 10 caracteres y digitar solo numeros"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Contraseña</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="password" formControlName="password" />
+        </div>
+        <app-form-error-message
+        *ngIf="handleInputValidation('password')"
+          message="Minimo 6 caracteres"
+        ></app-form-error-message>
+      </div>
+      
+      <div class="inputSection">
+        <div class="labelContainer">
+          <label>Confirmacion Contraseña</label>
+        </div>
+        <div class="itemContainer">
+          <input class="itemClass" type="password" formControlName="confirmpassword" />
+        </div>
+        <app-form-error-message
+          *ngIf="handleInputValidation('confirmpassword')"
+          message="Minimo 6 caracteres"
+        ></app-form-error-message>
+      </div>
+    
+      <div class="inputSection">
+        <input type="checkbox" formControlName="termsAndConditions" /> <label>Acepto terminos y condiciones</label>
+        <app-form-error-message
+        *ngIf="handleInputValidation('termsAndConditions')"
+          message="Debes aceptar terminos y condiciones"
+        ></app-form-error-message>
+      </div>
+    </div> 
+    
+    <div class="inputSection">
+      <app-form-error-message
+        *ngIf="showResponse"
+        message="{{errorSuccessMessage}}"
+        [success]="successResponse"
+      ></app-form-error-message>
+    </div>
+  
+    <div class="inputSection">
+    <button class="btnClass primary" type="submit" [disabled]="!signUpForm.valid">
+      Guardar
+    </button>
+    </div>
+  </form>
+</div>

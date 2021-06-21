@@ -4,5 +4,22 @@
 
 .image{
     width: 100px;
-    height: 127px;
+}
+
+.containerHeaderItem {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerA {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+
+    h6 {
+      margin-top: 0px;
+      margin-bottom: 0px;  
+    }
 }
