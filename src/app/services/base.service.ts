@@ -10,7 +10,7 @@ export class BaseService {
     constructor(
         public readonly http: HttpClient,
     ) {
-        this.path = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com'
+        this.path = 'https://private-8e8921-woloxfrontendinverview.apiary-mock.com'
     }
 
     public initializeHeader() {
